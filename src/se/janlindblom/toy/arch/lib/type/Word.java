@@ -1,33 +1,26 @@
 package se.janlindblom.toy.arch.lib.type;
 
 public class Word {
-	private byte[] word;
+	private short word;
 	
 	public Word() {
-		setWord(new byte[2]);
+		setWord((short)0);
 	}
 	
-	public Word(byte msb, byte lsb) {
+	public Word(short word) {
 		this();
-		this.store(msb, lsb);
-	}
-	
-	public void store(byte msb, byte lsb) {
-		word[0] = msb;
-		word[1] = lsb;
+		this.setWord(word);
 	}
 	
 	public int intValue() {
-		int retval = 0;
-		retval = (word[0] << 8) & word[1];
-		return retval;
+		return (int)word;
 	}
 
-	public void setWord(byte[] word) {
+	public void setWord(short word) {
 		this.word = word;
 	}
 
-	public byte[] getWord() {
+	public short getWord() {
 		return word;
 	}
 }
