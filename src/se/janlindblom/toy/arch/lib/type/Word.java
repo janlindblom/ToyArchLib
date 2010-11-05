@@ -1,6 +1,6 @@
 package se.janlindblom.toy.arch.lib.type;
 
-public class Word {
+public class Word implements Value {
 	private short word;
 	
 	public Word() {
