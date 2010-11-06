@@ -1,0 +1,3 @@
+**The design branch**
+
+This is the design branch, here the library is designed.
