@@ -4,7 +4,7 @@
 package se.janlindblom.toy.arch.lib.type;
 
 /**
- * @author jan
+ * @author Jan Lindblom (lindblom.jan@gmail.com)
  *
  */
 public interface Value {

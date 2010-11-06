@@ -1,7 +1,13 @@
 package se.janlindblom.toy.arch.lib;
 
+import se.janlindblom.toy.arch.lib.type.Address;
 import se.janlindblom.toy.arch.lib.type.Word;
 
+/**
+ * 
+ * @author Jan Lindblom (lindblom.jan@gmail.com)
+ *
+ */
 public class Memory {
 	private int size;
 	private Word[] memory;
@@ -17,12 +23,12 @@ public class Memory {
 		this.setMemory(new Word[this.getSize()]);
 	}
 	
-	public void store(int addr, Word data) {
-		memory[addr] = data;
+	public void store(Address addr, Word data) {
+		memory[addr.intValue()] = data;
 	}
 	
-	public Word read(int addr) {
-		return memory[addr];
+	public Word read(Address addr) {
+		return memory[addr.intValue()];
 	}
 	
 	public void setSize(int size) {
