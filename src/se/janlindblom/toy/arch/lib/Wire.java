@@ -14,46 +14,47 @@ import se.janlindblom.toy.arch.lib.type.Value;
  *
  */
 public class Wire extends Observable implements Wiring {
-	private int width = 1;
+	private int width;
 	private Bit value;
 
 	/**
 	 * 
 	 */
 	public Wire() {
-		// TODO Auto-generated constructor stub
+		this.width = 1;
+		this.setValue(new Bit());
 	}
 
 	/* (non-Javadoc)
 	 * @see se.janlindblom.toy.arch.lib.Wiring#connectOutlet(java.util.Observer)
 	 */
 	public void connectOutlet(Observer o) {
-		// TODO Auto-generated method stub
-
+		this.addObserver(o);
 	}
 
 	/* (non-Javadoc)
 	 * @see se.janlindblom.toy.arch.lib.Wiring#getValue()
 	 */
 	public Value getValue() {
-		// TODO Auto-generated method stub
-		return null;
+		return value;
 	}
 
 	/* (non-Javadoc)
 	 * @see se.janlindblom.toy.arch.lib.Wiring#getWidth()
 	 */
 	public int getWidth() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.width;
 	}
 
 	/* (non-Javadoc)
 	 * @see se.janlindblom.toy.arch.lib.Wiring#setValue(se.janlindblom.toy.arch.lib.type.Value)
 	 */
 	public void setValue(Value value) {
-		// TODO Auto-generated method stub
-
+		if (value.getClass().equals(Bit.class)) {
+			this.value = (Bit)value;
+			this.setChanged();
+			this.notifyObservers(value);
+		}
 	}
 
 }
