@@ -5,13 +5,14 @@ package se.janlindblom.toy.arch.lib.instruction;
 
 import se.janlindblom.toy.arch.lib.type.Address;
 import se.janlindblom.toy.arch.lib.type.Instruction;
+import se.janlindblom.toy.arch.lib.type.OpCode;
 
 /**
  * @author Jan Lindblom (lindblom.jan@gmail.com)
  *
  */
 public class Store implements Instruction {
-	private int opCode;
+	private OpCode opCode;
 	private String mnemonic;
 	private Address address;
 
@@ -19,7 +20,7 @@ public class Store implements Instruction {
 	 * 
 	 */
 	public Store() {
-		this.opCode = 0;
+		this.opCode = new OpCode();
 		this.mnemonic = "STORE";
 	}
 	
@@ -45,7 +46,7 @@ public class Store implements Instruction {
 	/* (non-Javadoc)
 	 * @see se.janlindblom.toy.arch.lib.type.Instruction#getOpCode()
 	 */
-	public int getOpCode() {
+	public OpCode getOpCode() {
 		return this.opCode;
 	}
 
