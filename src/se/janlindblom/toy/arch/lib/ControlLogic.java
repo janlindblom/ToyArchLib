@@ -1,10 +1,8 @@
-/**
- * 
- */
 package se.janlindblom.toy.arch.lib;
 
 /**
  * @author Jan Lindblom (lindblom.jan@gmail.com)
+ * @version 0.1
  *
  */
 public class ControlLogic {
@@ -21,19 +19,22 @@ public class ControlLogic {
 	private Wire alu2;
 	private Wire alu3;
 
+	/**
+	 * 
+	 */
 	public ControlLogic() {
-		this.setOpcode(new OpCodeBus());
-		this.setWriteRAM(new Wire());
-		this.setIncPC(new Wire());
-		this.setClockPC(new Wire());
-		this.setAddrIR(new Wire());
-		this.setClockACC(new Wire());
-		this.setAluCIN(new Wire());
-		this.setAluMode(new Wire());
-		this.setAlu0(new Wire());
-		this.setAlu1(new Wire());
-		this.setAlu2(new Wire());
-		this.setAlu3(new Wire());
+		this.opcode = new OpCodeBus();
+		this.writeRAM = new Wire();
+		this.incPC = new Wire();
+		this.clockPC = new Wire();
+		this.addrIR = new Wire();
+		this.clockACC = new Wire();
+		this.aluCIN = new Wire();
+		this.aluMode = new Wire();
+		this.alu0 = new Wire();
+		this.alu1 = new Wire();
+		this.alu2 = new Wire();
+		this.alu3 = new Wire();
 	}
 	
 	/**

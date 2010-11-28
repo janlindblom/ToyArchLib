@@ -1,6 +1,3 @@
-/**
- * 
- */
 package se.janlindblom.toy.arch.lib;
 
 import java.util.Observer;
@@ -10,6 +7,7 @@ import se.janlindblom.toy.arch.lib.type.Word;
 
 /**
  * @author Jan Lindblom (lindblom.jan@gmail.com)
+ * @version 0.1
  *
  */
 public class Bus implements Wiring {
